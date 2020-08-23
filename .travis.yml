@@ -2,7 +2,7 @@ matrix:
   include:
     - language: rust
       rust:
-        - 1.0.5
+        - 1.0.0
         - nightly
       script:
         - cargo build --verbose --all
