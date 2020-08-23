@@ -1,5 +1,5 @@
 pub fn main() {
- board: [ [0,1,0], [0,0,1], [1,1,1], [0,0,0] ];
+ let mut board: [[u32; 3]; 4] = [[0,1,0], [0,0,1], [1,1,1], [0,0,0]];
         let m = board.len() as i32;
         let n = board[0].len() as i32;
         let nbs = [(-1, -1), (-1, 0), (-1, 1), (0, -1),
@@ -31,4 +31,5 @@ pub fn main() {
                 }
             }
         }
+        println!("{:?}", board);
 }
