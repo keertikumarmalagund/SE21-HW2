@@ -1,3 +1,10 @@
+package main
+
+import (
+	"fmt"
+)
+
+
 func gameOfLife(board [][]int)  {    
     const (
 		aliveToDead = -1
