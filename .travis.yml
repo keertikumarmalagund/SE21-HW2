@@ -7,3 +7,26 @@ matrix:
       script:
         - cargo build --verbose --all
         - cargo test --verbose --all
+        
+    - language: verilog
+      verilog:
+        - 1.0.5
+        - nightly
+        
+      script:
+        - cd Julia
+        - julia --project=docs/ -e 'using Pkg; Pkg.instantiate(); Pkg.develop(PackageSpec(path=pwd()))'
+        
+    - language: go
+      go:
+        - 2.12.2
+        
+      jdk:
+        - openjdk8
+        
+      script:
+        - cd Scala
+        - sbt ++$TRAVIS_SCALA_VERSION compile
+        - sbt ++$TRAVIS_SCALA_VERSION test
+        
+   
