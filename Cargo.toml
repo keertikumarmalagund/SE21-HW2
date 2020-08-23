@@ -3,3 +3,5 @@
 name = "SE21-HW2"
 version = "1.0"
 authors = ["Ashish Sadanand Rajpurohit, Katta Rishabh"]
+
+[dependencies]
